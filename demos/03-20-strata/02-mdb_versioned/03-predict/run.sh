@@ -2,4 +2,4 @@
 
 set -e
 
-docker-compose -f docker-compose.yaml up
+docker-compose --rm -f docker-compose.yaml up
