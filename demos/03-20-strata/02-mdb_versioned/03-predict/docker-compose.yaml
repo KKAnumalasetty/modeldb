@@ -1,7 +1,7 @@
 version: "3.5"
 services:
     model:
-        image: model:01-adhoc
+        image: model:02-mdb_versioned
         container_name: model
         expose:
         - "5000"
@@ -11,6 +11,8 @@ services:
         - model
         volumes:
         - ./logs/:/logs/
+        environment:
+        - "GOOD_IN_GERMAN=${GOOD_IN_GERMAN}"
 
     prometheus:
         image: prom/prometheus:v2.16.0
