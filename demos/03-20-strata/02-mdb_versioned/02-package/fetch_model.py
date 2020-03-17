@@ -6,7 +6,7 @@ verta_host = os.environ['VERTA_HOST']
 run_id = os.environ['RUN_ID']
 
 client = Client(verta_host)
-run = client.set_experiment_run(id="bd123f82-6371-4aad-b36f-452967a6a563")
+run = client.set_experiment_run(id=run_id)
 commit = run.get_commit()[0]
 
 # retrieve model
